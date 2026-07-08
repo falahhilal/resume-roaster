@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Roaster</title>
+  <style>
+    body { font-family: sans-serif; max-width: 500px; margin: 60px auto; padding: 0 20px; }
+    input, button { display: block; width: 100%; margin: 12px 0; padding: 10px; font-size: 16px; }
+    #result { white-space: pre-wrap; margin-top: 24px; background: #f4f4f4; padding: 16px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Resume Roaster 🔥</h1>
+  <p>Upload your resume, tell it what job you want, get roasted.</p>
+
+  <form id="roastForm">
+    <input type="file" id="resumeFile" accept=".pdf,.docx" required>
+    <input type="text" id="jobTitle" placeholder="e.g. AI Engineer" required>
+    <button type="submit">Roast me</button>
+  </form>
+
+  <div id="result"></div>
+  <script src="script.js"></script>
+</body>
+</html>
