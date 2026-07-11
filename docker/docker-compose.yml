@@ -6,7 +6,8 @@ services:
     ports:
       - "5678:5678"
     environment:
-      - N8N_FUNCTION_ALLOW_EXTERNAL=mammoth,pdf-to-img
+      - NODE_FUNCTION_ALLOW_EXTERNAL=mammoth,pdf-to-img
+      - NODE_FUNCTION_ALLOW_BUILTIN=*
       - NODE_PATH=/home/node/.n8n/custom-modules/node_modules
       - N8N_SECURE_COOKIE=false
     volumes:
