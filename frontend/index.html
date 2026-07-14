@@ -1,25 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Resume Roaster</title>
-  <style>
-    body { font-family: sans-serif; max-width: 500px; margin: 60px auto; padding: 0 20px; }
-    input, button { display: block; width: 100%; margin: 12px 0; padding: 10px; font-size: 16px; }
-    #result { white-space: pre-wrap; margin-top: 24px; background: #f4f4f4; padding: 16px; border-radius: 8px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Roaster</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Resume Roaster 🔥</h1>
-  <p>Upload your resume, tell it what job you want, get roasted.</p>
 
-  <form id="roastForm">
-    <input type="file" id="resumeFile" accept=".pdf,.docx" required>
-    <input type="text" id="jobTitle" placeholder="e.g. AI Engineer" required>
-    <button type="submit">Roast me</button>
-  </form>
+    <div class="background">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
 
-  <div id="result"></div>
-  <script src="script.js"></script>
+    <main class="container">
+
+        <section class="hero">
+
+            <h1>
+               Resume Roaster
+            </h1>
+
+            <p class="subtitle">
+                Honest AI feedback for your resume.
+                <br>
+                No sugarcoating. Just facts.
+            </p>
+
+        </section>
+
+        <section class="card">
+
+            <form id="roastForm">
+
+                <label class="upload-area">
+
+                    <input
+                        type="file"
+                        id="resumeFile"
+                        accept=".pdf,.docx"
+                        required
+                    >
+
+                    <div class="upload-content">
+
+                        <div class="upload-icon">
+                            📄
+                        </div>
+
+                        <h3>Upload your resume</h3>
+
+                        <p>
+                            PDF or DOCX
+                            <br>
+                            Click here to browse
+                        </p>
+
+                        <span id="selectedFile">
+                            No file selected
+                        </span>
+
+                    </div>
+
+                </label>
+
+                <div class="input-group">
+
+                    <label for="jobTitle">
+                        Target Job
+                    </label>
+
+                    <input
+                        type="text"
+                        id="jobTitle"
+                        placeholder="e.g. AI Engineer"
+                        required
+                    >
+
+                </div>
+
+                <button
+                    id="submitBtn"
+                    type="submit"
+                >
+                    Roast My Resume
+                </button>
+
+            </form>
+
+        </section>
+
+        <section
+            id="resultCard"
+            class="result-card hidden"
+        >
+
+            <div class="result-header">
+
+                <h2>
+                    Your Roast
+                </h2>
+
+                <button
+                    id="copyBtn"
+                    type="button"
+                >
+                    📋 Copy
+                </button>
+
+            </div>
+
+            <div id="result"></div>
+
+        </section>
+
+        <footer>
+
+            <span>
+                Made by Falah Hilal
+            </span>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
